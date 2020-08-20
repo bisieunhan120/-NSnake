@@ -3,7 +3,7 @@
 
 void snakeCell(COORD c, SDL_bool head)
 {
-	int color = head ? CR_SNAKE_HEAD : CR_SNAKE_BODY;
+	int color = head ? CR_SNAKE_HEAD : CR_SNAKE_BODY * rand() % 14 + 1;
 	rectDraw(c.x * BOARD_CELL, c.y * BOARD_CELL, BOARD_CELL, BOARD_CELL, color);
 }
 
